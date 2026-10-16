@@ -26,7 +26,7 @@ void z1()
     //задача 1а
     printf("задача 1а\n");
     float ff=floor(f);
-    printf("Целая: %.0f \nДробная: %.2f\n",f,f-ff);
+    printf("Целая: %.0f \nДробная: %.2f\n",ff,f-ff);
 
     //задача 1б
     printf("задача 1б\n");
@@ -34,7 +34,10 @@ void z1()
 
     //задача 1в
     printf("\nзадача 1в\n");
-    printf("\n%f",1.0/i);
+
+    printf("неявное деление: %f\n", 1.0 / i);
+    printf("явное деление: %f\n", (float)1 / i);
+    printf("целочисленное деление: %d\n", 1 / i);
 }
 void z2()
 {
@@ -44,6 +47,12 @@ void z2()
     double z=(double)a/b;
     printf("%d %f %f",x,y,z);
     printf("\n%d %f %f", a/b, (float)a/b,(double)a/b);
+
+    printf("опыт:\n");
+    printf("int/int: %d\n", a / b);
+    printf("float/int: %f\n", (float)a / b);
+    printf("double/int: %f\n", (double)a / b);
+    printf("1.0/int: %f\n", 1.0 / b);
 }
 void z3()
 {
