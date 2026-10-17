@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-void z1();
-void z2();
-void z3();
+int z1();
+int z2();
+int z3();
 int main() 
 {
 z1();
@@ -11,7 +11,7 @@ z3();
 }
 
 
-void z1()
+int z1()
 {
     printf("1 задание\n");
     char c = '!'; 
@@ -30,7 +30,7 @@ void z1()
 
     //задача 1б
     printf("задача 1б\n");
-    printf("%d %x",i,i); //%x - выводит числов 16-ричной сс
+    printf("код символа '%c': %d (dec), %x (hex)\n", c, (int)c, (int)c);
 
     //задача 1в
     printf("\nзадача 1в\n");
@@ -39,12 +39,12 @@ void z1()
     printf("явное деление: %f\n", (float)1 / i);
     printf("целочисленное деление: %d\n", 1 / i);
 }
-void z2()
+int z2()
 {
     printf("\n2 задание\n");
     int a=11,b=3,x=a/b;
-    float y=(float)a/b;
-    double z=(double)a/b;
+    float y = a / b;  
+    double z = a / b;
     printf("%d %f %f",x,y,z);
     printf("\n%d %f %f", a/b, (float)a/b,(double)a/b);
 
@@ -54,7 +54,7 @@ void z2()
     printf("double/int: %f\n", (double)a / b);
     printf("1.0/int: %f\n", 1.0 / b);
 }
-void z3()
+int z3()
 {
     printf("\n3 задание\n");
     int a=123;
